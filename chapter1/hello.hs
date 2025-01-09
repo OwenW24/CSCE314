@@ -28,6 +28,12 @@ seqn (act:acts) = do x <- act
                      xs <- seqn acts
                      return (x:xs)
 
+double :: Num a => a -> a
+double x = x+x
+
+quad :: Num a => a -> a
+quad x = double (double x)
+
 main :: IO Integer
 main = do
 
