@@ -34,6 +34,13 @@ double x = x+x
 quad :: Num a => a -> a
 quad x = double (double x)
 
+
+factorial :: (Num a, Enum a) => a -> a
+factorial n = product [1..n]
+
+average :: Foldable t => t Int -> Int
+average ns = sum ns `div` length ns
+
 main :: IO Integer
 main = do
 
