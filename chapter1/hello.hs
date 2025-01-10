@@ -41,6 +41,9 @@ factorial n = product [1..n]
 average :: Foldable t => t Int -> Int
 average ns = sum ns `div` length ns
 
+mult :: Num a => a -> a -> a -> a
+mult x y z = x*y*z
+
 main :: IO Integer
 main = do
 
